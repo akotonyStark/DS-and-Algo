@@ -6,3 +6,9 @@ for (var i in arr) {
         console.log("Found:", arr[i] + " at postion ", i)
     }
 }
+
+
+//version two
+for (var i in arr) {
+    (arr[i] === 12) ? console.log("Found:", arr[i] + " at postion ", i): console.log("Not found")
+}
