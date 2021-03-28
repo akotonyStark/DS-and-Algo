@@ -1,4 +1,4 @@
-procedure linear_search (list, value)
+function linear_search (list, value)
 
    for each item in the list
       if match item == value
@@ -6,4 +6,4 @@ procedure linear_search (list, value)
       end if
    end for
 
-end procedure
+end function
