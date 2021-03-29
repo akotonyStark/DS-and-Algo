@@ -1,6 +1,7 @@
 public class QuickUnion{
 
     private int[] id;
+    private int[] sz;
 
     public QuickUnion(int N){
         id = new int[N]
@@ -24,6 +25,24 @@ public class QuickUnion{
             int i = parent(q);
             int j = parent(p);
             id[i] = j;
+        }
+
+
+        public void weightedUnion(int p, int q){
+            int i = root(p);
+            int j = root(q);
+
+            if(i == j){
+                return;
+            }
+            if(sz[i] < sz[j]){
+                id[i] = j;
+                sz[j] += sz[i];
+            }
+            else{
+                id[j] = i;
+                sz[i] += sz[j];
+            }
         }
     }
 }
